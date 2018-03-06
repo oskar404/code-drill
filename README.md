@@ -30,7 +30,7 @@ problems every Software Engineer should be able to solve in less than 1
 hour"](goo.gl/z23q5U). So here we have the next challenges:
 
 1. Write three functions that compute the sum of the numbers in a given list
-  using a for-loop, a while-loop, and recursion.
+   using a for-loop, a while-loop, and recursion.
 2. Write a function that combines two lists by alternatingly taking elements.
    For example: given the two lists [a, b, c] and [1, 2, 3], the function should
    return [a, 1, b, 2, c, 3].
