@@ -14,6 +14,7 @@ language differences.
 - [Bash Programming](sh/README.md)
 - [Python Programming](py/README.md)
 - [Golang Programming](go/README.md)
+- [Rust Programming](rs/README.md)
 
 ## 1. Hello World
 
