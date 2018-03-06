@@ -1,4 +1,4 @@
-// Hellow World in Go 
+// Hellow World in Go
 package main
 
 import "fmt"

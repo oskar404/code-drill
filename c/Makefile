@@ -17,7 +17,4 @@ helloworld:  helloworld.o
 	$(CXX) $^ -o $@ $(LIBS)
 
 clean:
-	@rm -f *~ *.o
-
-distclean: clean
-	@rm -f helloworld
+	@rm -f *~ *.o helloworld
