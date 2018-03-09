@@ -7,7 +7,7 @@ LIBS :=
 INCLUDES := -I.
 CXXFLAGS := -Wall -Werror -std=c++11
 CXX := g++ $(CXXFLAGS)
-PRGS := helloworld fiveproblems1 fiveproblems2 fibonacci arrange
+PRGS := helloworld fiveproblems1 fiveproblems2 fibonacci arrange solutions
 
 all: $(PRGS)
 
@@ -27,6 +27,9 @@ fibonacci: fibonacci.o
 	$(CXX) $^ -o $@ $(LIBS)
 
 arrange: arrange.o
+	$(CXX) $^ -o $@ $(LIBS)
+
+solutions: solutions.o
 	$(CXX) $^ -o $@ $(LIBS)
 
 clean:
