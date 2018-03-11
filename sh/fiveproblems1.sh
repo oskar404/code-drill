@@ -19,7 +19,7 @@ function whileloop()
     local idx=0
     while [ $idx -lt $args_size ]; do
         val=$(($val + ${args[$idx]}));
-        idx=$(($idx + 1)) 
+        idx=$(($idx + 1))
     done
     echo "whileloop: $val"
 }

@@ -11,9 +11,9 @@ function alternate()
 {
     echo ${#V1[@]}
     echo ${#V2[@]}
-    
+
     if [ ${#V1[@]} != ${#V2[@]} ]; then
-        echo "Vectors do not have same size"    
+        echo "Vectors do not have same size"
     fi
 
     for i in $(seq 0 $((${#V1[@]} - 1)) ) ; do
