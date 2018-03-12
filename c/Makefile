@@ -5,16 +5,20 @@
 
 LIBS :=
 INCLUDES := -I.
-CXXFLAGS := -Wall -Werror -ansi -pedantic
-CXX := gcc $(CXXFLAGS)
+CCFLAGS := -Wall -Werror -ansi -pedantic --std=c11
+CC := gcc $(CCFLAGS)
+PRGS := helloworld fiveproblems1
 
-all: helloworld
+all: $(PRGS)
 
 %.o: %.c
-	$(CXX) -c $< -o $@ $(INCLUDES)
+	$(CC) -c $< -o $@ $(INCLUDES)
 
-helloworld:  helloworld.o
-	$(CXX) $^ -o $@ $(LIBS)
+helloworld: helloworld.o
+	$(CC) $^ -o $@ $(LIBS)
+
+fiveproblem1: fiveproblem1.o
+	$(CC) $^ -o $@ $(LIBS)
 
 clean:
-	@rm -f *~ *.o helloworld
+	@rm -f *~ *.o $(PRGS)
