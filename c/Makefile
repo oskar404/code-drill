@@ -7,7 +7,7 @@ LIBS :=
 INCLUDES := -I.
 CCFLAGS := -Wall -Werror -ansi -pedantic --std=c11
 CC := gcc $(CCFLAGS)
-PRGS := helloworld fiveproblems1 fiveproblems2
+PRGS := helloworld fiveproblems1 fiveproblems2 fibonacci
 
 all: $(PRGS)
 
@@ -21,6 +21,9 @@ fiveproblem1: fiveproblem1.o
 	$(CC) $^ -o $@ $(LIBS)
 
 fiveproblem2: fiveproblem2.o
+	$(CC) $^ -o $@ $(LIBS)
+
+fibonacci: fibonacci.o
 	$(CC) $^ -o $@ $(LIBS)
 
 clean:
