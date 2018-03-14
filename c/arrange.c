@@ -45,7 +45,6 @@ int readargs(int argc, char* argv[], int* buffer)
     return len;
 }
 
-
 int main(int argc, char* argv[])
 {
     int buffer[BUFFER_SIZE];
