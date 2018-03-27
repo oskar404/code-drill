@@ -1,0 +1,11 @@
+# Object files and other intermedia files
+*.o
+*.hi
+
+# Program names
+helloworld
+fiveproblems1
+fiveproblems2
+fibonacci
+arrange
+solutions
