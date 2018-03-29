@@ -42,7 +42,7 @@ func main() {
     if len(os.Args) >= 2 {
         input, err := strconv.Atoi(os.Args[1])
         if err != nil {
-            fmt.Println(os.Stderr, "Invalid input: %s", os.Args[1])
+            fmt.Fprintln(os.Stderr, "Invalid input:", os.Args[1])
             os.Exit(1)
         }
         size = input
