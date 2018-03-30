@@ -34,7 +34,7 @@ func (s intSorter) Less(i, j int) bool {
 }
 
 func main() {
-    input := make([]int, 0, 5) 
+    input := make([]int, 0, 5)
     for _, arg := range os.Args[1:] {
         value, err := strconv.Atoi(arg)
         if err != nil {

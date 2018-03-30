@@ -28,12 +28,12 @@ void recurse(std::vector<int>& buf, unsigned idx)
             std::cout << buf << " = " << SUM << std::endl;
         return;
     }
-    
+
     // Branch 1: Add number to previous
     buf.push_back(NUMBERS[idx]);
     recurse(buf, idx+1);
     buf.pop_back();
-    
+
     // Branch 2: Subtract number from previous
     buf.push_back(-1*NUMBERS[idx]);
     recurse(buf, idx+1);

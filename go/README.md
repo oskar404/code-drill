@@ -12,7 +12,7 @@ To compile:
 or the go tools can be used directly e.g.
 
     $ go build helloworld.go
-    
+
 To test the examples just run them like:
 
     $ ./helloworld
