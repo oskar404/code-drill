@@ -3,7 +3,7 @@
 # DESCRIPTION:  Build file for the Go language
 #
 
-PRGS := helloworld fiveproblems1 fiveproblems2 fibonacci arrange
+PRGS := helloworld fiveproblems1 fiveproblems2 fibonacci arrange solutions
 
 all: $(PRGS)
 
@@ -20,6 +20,9 @@ fibonacci: fibonacci.go
 	go build $^
 
 arrange: arrange.go
+	go build $^
+
+solutions: solutions.go
 	go build $^
 
 clean:
