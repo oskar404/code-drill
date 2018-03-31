@@ -4,7 +4,7 @@
 #
 
 RUSTC := rustc
-PRGS := helloworld fiveproblems1
+PRGS := helloworld fiveproblems1 fiveproblems2
 
 all: $(PRGS)
 
@@ -12,6 +12,9 @@ helloworld: helloworld.rs
 	$(RUSTC) $^
 
 fiveproblems1: fiveproblems1.rs
+	$(RUSTC) $^
+
+fiveproblems2: fiveproblems2.rs
 	$(RUSTC) $^
 
 clean:
