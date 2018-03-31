@@ -4,11 +4,15 @@
 #
 
 RUSTC := rustc
+PRGS := helloworld fiveproblems1
 
-all: helloworld
+all: $(PRGS)
 
 helloworld: helloworld.rs
-	$(RUSTC) -o $@ $^
+	$(RUSTC) $^
+
+fiveproblems1: fiveproblems1.rs
+	$(RUSTC) $^
 
 clean:
-	@rm -f *~ helloworld
+	@rm -f *~ $(PRGS)
