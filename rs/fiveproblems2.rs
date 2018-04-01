@@ -3,23 +3,16 @@
 // return [a, 1, b, 2, c, 3].
 
 fn main() {
-    let v1 = ["A".to_string(), "B".to_string(), "C".to_string(), "D".to_string()];
-    let v2 = ["1".to_string(), "2".to_string(), "3".to_string(), "4".to_string(),
-              "XX".to_string(), "YY".to_string()];
-    let result = alternate(&v1, &v2);
-    print!("[");
-    let mut first = true;
-    for i in result {
-        if ! first {
-            print!(", ");
-        }
-        print!("{}", i);
-        first = false;
-    }
-    println!("]");
+    let v1: Vec<String> =
+        vec!["A".to_string(), "B".into(), "C".into(), "D".into()];
+    let v2: Vec<String> =
+        vec!["1".to_string(), "2".into(), "3".into(), "4".into(), "XX".into(),
+            "YY".into()];
+    let result = alternate(v1, v2);
+    println!("{:?}", result);
 }
 
-fn alternate(v1: &[String], v2: &[String]) -> Vec<String> {
+fn alternate(v1: Vec<String>, v2: Vec<String>) -> Vec<String> {
     let mut result: Vec<String> = Vec::new();
     let mut i = 0;
     while i < v1.len() || i < v2.len() {
