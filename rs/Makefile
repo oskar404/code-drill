@@ -4,7 +4,7 @@
 #
 
 RUSTC := rustc
-PRGS := helloworld fiveproblems1 fiveproblems2 fibonacci
+PRGS := helloworld fiveproblems1 fiveproblems2 fibonacci arrange
 
 all: $(PRGS)
 
@@ -18,6 +18,9 @@ fiveproblems2: fiveproblems2.rs
 	$(RUSTC) $^
 
 fibonacci: fibonacci.rs
+	$(RUSTC) $^
+
+arrange: arrange.rs
 	$(RUSTC) $^
 
 clean:
