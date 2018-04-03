@@ -17,6 +17,15 @@ language differences.
 - [Rust Programming](rs/README.md)
 - [Haskell Programming](hs/README.md)
 
+## References
+
+Here are some references used/needed when working with these problems:
+
+- C and C++: https://en.cppreference.com/
+- Go: https://golang.org/doc/
+- Rust: https://doc.rust-lang.org/stable/book/second-edition/
+- Python: https://docs.python.org/
+
 ## 1. Hello World
 
 This is usually the first problem to be solved in anything. It is kind of clever
