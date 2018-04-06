@@ -6,6 +6,7 @@ fn main() {
     println!("forloop(): {}", forloop(&l1));
     println!("whileloop(): {}", whileloop(&l1));
     println!("recursion(): {}", recursion(&l1, 0));
+    println!("sum(): {}", sum(&l1));
 }
 
 fn forloop(list: &[i32]) -> i32 {
@@ -31,4 +32,9 @@ fn recursion(list: &[i32], i: usize) -> i32 {
         return 0;
     }
     return list[i] + recursion(list, i+1);
+}
+
+// Rust has nice collection methods
+fn sum(list: &[i32]) -> i32 {
+    list.iter().sum()
 }

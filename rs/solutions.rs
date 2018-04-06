@@ -16,23 +16,20 @@ fn recurse(buf: &Vec<i32>, idx: usize) {
 
     // Check if we have recursed to depth
     if idx >= NUMBERS.len() {
-        let mut sum: i32 = 0;
-        for i in buf.iter() {
-            sum += i;
-        }
+        let sum = buf.iter().sum();
         if sum == SUM {
             print_result(buf, sum);
         }
         return;
     }
-    
+
     // Branch 1: Add number to previous
     {
         let mut buf = buf.clone(); // Local copy of buf
         buf.push(NUMBERS[idx]);
         recurse(&buf, idx+1);
     }
-    
+
     // Branch 2: Subtract number from previous
     {
         let mut buf = buf.clone(); // Local copy of buf
@@ -54,7 +51,7 @@ fn print_result(buf: &Vec<i32>, sum: i32) {
         if first {
             print!("{}", i);
         } else {
-            print!(" {} {}", if *i < 0 { '-' } else { '+' } ,i.abs());            
+            print!(" {} {}", if *i < 0 { '-' } else { '+' } ,i.abs());
         }
         first = false;
     }

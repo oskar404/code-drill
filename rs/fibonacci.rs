@@ -2,6 +2,7 @@
 // By definition, the first two numbers in the Fibonacci sequence are 0 and 1,
 // and each subsequent number is the sum of the previous two. As an example,
 // here are the first 10 Fibonnaci numbers: 0, 1, 1, 2, 3, 5, 8, 13, 21, and 34.
+
 use std::env;
 
 fn main() {
@@ -35,9 +36,7 @@ fn main() {
     }
 
     let result = fibonacci(size);
-    for i in result {
-        println!("{}", i);
-    }
+    result.iter().for_each(|i| println!("{}", i));
 }
 
 fn fibonacci(size: usize) -> Vec<i64> {
@@ -50,11 +49,9 @@ fn fibonacci(size: usize) -> Vec<i64> {
         return result;
     }
     result.push(1);
-    let mut i: usize = 2;
-    while i < size {
-        let next: i64 = result[i-2] + result[i-1];
+    for i in 2..size {
+        let next = result[i-2] + result[i-1];
         result.push(next);
-        i += 1;
     }
     result
 }
