@@ -6,53 +6,31 @@
 use std::env;
 
 fn main() {
-    let size: usize;
-    let args: Vec<String> = env::args().collect();
-    match args.len() {
-        1 => {
-            eprintln!("error: Missing number of iterations!");
-            return;
-        },
-        2 => {
-            size = match args[1].parse() {
-                Ok(n) => {
-                    if n > 93 {
-                        eprintln!("error: Input too large: {} (Integer overflow)", args[1]);
-                        return
-                    } else {
-                        n
-                    }
-                },
-                Err(_) => {
-                    eprintln!("error: Positive integer required: {}", args[1]);
-                    return;
-                }
-            }
-        },
-        _ => {
-            eprintln!("error:Invalid number of arguments!");
-            return;
-        }
-    }
 
+    let arg = env::args().nth(1).expect("error: Missing number of iterations!");
+    let size: usize = arg.parse().expect("error: Positive integer required");
+    if size > 93 {
+        eprintln!("error: Input too large: {} (Integer overflow)", size);
+        return;
+    }
     let result = fibonacci(size);
     result.iter().for_each(|i| println!("{}", i));
 }
 
 fn fibonacci(size: usize) -> Vec<i64> {
     let mut result: Vec<i64> = Vec::new();
-    if size == 0 {
-        return result;
+    match size {
+        0 => { result },
+        1 => { result.push(0); result },
+        _ => {
+            result.push(0);
+            result.push(1);
+            for i in 2..size {
+                let next = result[i-2] + result[i-1];
+                result.push(next);
+            }
+            result
+        },
     }
-    result.push(0);
-    if size == 1 {
-        return result;
-    }
-    result.push(1);
-    for i in 2..size {
-        let next = result[i-2] + result[i-1];
-        result.push(next);
-    }
-    result
 }
 
