@@ -26,6 +26,8 @@ Here are some references used/needed when working with these problems:
 - Rust: https://doc.rust-lang.org/stable/book/second-edition/
 - Python: https://docs.python.org/
 
+Here is a [small motivation why to practice](https://blog.codinghorror.com/why-cant-programmers-program/)
+
 ## 1. Hello World
 
 This is usually the first problem to be solved in anything. It is kind of clever
