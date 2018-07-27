@@ -4,11 +4,15 @@
 #
 
 GHC := ghc
+PRGS := helloworld fiveproblems1
 
-all: helloworld
+all: $(PRGS)
 
-helloworld:  helloworld.hs
+helloworld: helloworld.hs
+	$(GHC) $^
+
+fiveproblems1: fiveproblems1.hs
 	$(GHC) $^
 
 clean:
-	@rm -f *~ *.o *.hi helloworld
+	@rm -f *~ *.o *.hi $(PRGS)
