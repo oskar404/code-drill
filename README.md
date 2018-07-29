@@ -25,6 +25,7 @@ Here are some references used/needed when working with these problems:
 - Go: https://golang.org/doc/
 - Rust: https://doc.rust-lang.org/stable/book/second-edition/
 - Python: https://docs.python.org/
+- Haskell: https://wiki.haskell.org/
 
 Here is a [small motivation why to practice](https://blog.codinghorror.com/why-cant-programmers-program/)
 
