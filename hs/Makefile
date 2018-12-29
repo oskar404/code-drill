@@ -4,7 +4,7 @@
 #
 
 GHC := ghc
-PRGS := helloworld fiveproblems1 fiveproblems2
+PRGS := helloworld fiveproblems1 fiveproblems2 fibonacci
 
 all: $(PRGS)
 
@@ -15,6 +15,9 @@ fiveproblems1: fiveproblems1.hs
 	$(GHC) $^
 
 fiveproblems2: fiveproblems2.hs
+	$(GHC) $^
+
+fibonacci: fibonacci.hs
 	$(GHC) $^
 
 clean:
